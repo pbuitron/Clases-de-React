@@ -18,17 +18,13 @@ export const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            
+
             <BotonPrincipal nombreBoton={`principal`} />
             <Secciones nombreSeccion={`Quienes Somos`} />
-            
-
 
             <li className="nav-item dropdown">
               <Categorias />
-
             </li>
-            
           </ul>
 
           <CartWidget cantidad={5} />
