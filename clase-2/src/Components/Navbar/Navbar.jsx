@@ -19,15 +19,12 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             
-            <BotonPrincipal nombreBoton={`Home`} />
-            <Secciones nombreSeccion={`Ofertas`} />
-            <Secciones nombreSeccion={`Historial`} />
+            <BotonPrincipal nombreBoton={`principal`} />
+            <Secciones nombreSeccion={`Quienes Somos`} />
+            
 
 
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
-              </a>
               <Categorias />
 
             </li>
