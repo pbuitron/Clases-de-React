@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
