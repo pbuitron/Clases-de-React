@@ -21,10 +21,8 @@ export const Navbar = () => {
 
             <BotonPrincipal nombreBoton={`principal`} />
             <Secciones nombreSeccion={`Quienes Somos`} />
+            <Categorias/>
 
-            <li className="nav-item dropdown">
-              <Categorias />
-            </li>
           </ul>
 
           <CartWidget cantidad={5} />
