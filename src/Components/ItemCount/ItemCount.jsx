@@ -1,18 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
-
-export const ItemCount = ({ValInicial,Stock}) => {
+import './ItemCount.css';
+export const ItemCount = ({ ValInicial, Stock }) => {
     const [contador, setContador] = useState(ValInicial)
-const sumar = ()=> contador < Stock && setContador(contador+1)
-const restar = ()=> contador > ValInicial && setContador(contador-1)
+    const sumar = () => contador < Stock && setContador(contador + 1)
+    const restar = () => contador > ValInicial && setContador(contador - 1)
     return (
-        <div>
-            <button className='btn btn-primary' onClick={() => restar()}>-</button>
-            <span>
-            {contador}    
-            </span> 
-            <button className='btn btn-primary' onClick={()=> sumar()}>+</button>
-            <button className='btn btn-primary'>AGREGAR</button>
+        <div className='container contenedor'>
+            <div className='contenedor-fluid'>
+                <button className='btn btn-primary restar' onClick={() => restar()}>-</button>
+                <span className='contador'>
+                    {contador}
+                </span>
+
+                <button className='btn btn-primary sumar' onClick={() => sumar()}>+</button>
+            </div>
+            <button className='btn btn-primary agregar'>AGREGAR</button>
         </div>
     )
-     }
+}

@@ -19,6 +19,7 @@ export const ItemDetail = ({ prod }) => {
                         <p className="text- ">Precio: S/. {prod.precio} </p>
                         <p className="card-text ">Cantidad en Stock: {prod.stock} </p>
                         <p className="card-text">Etiquetas #{prod.categoria} </p>
+                      
                         <ItemCount ValInicial={1} Stock={prod.stock} />
                     </div>
                 </div>

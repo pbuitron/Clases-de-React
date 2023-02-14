@@ -1,0 +1,26 @@
+.contador{
+    display: flex;
+    align-items: center;
+width: 2rem;
+justify-content: center;
+text-align: center;
+
+}
+
+.contenedor{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+width: 19rem;
+}
+
+.contenedor-fluid{
+display: flex;
+
+}
+
+.agregar{
+width: 8.5rem;
+margin-top: 1rem;
+}

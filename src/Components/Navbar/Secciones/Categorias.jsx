@@ -1,19 +1,19 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 export const Categorias = () => {
   return (
     <>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Categorias
-        </a>
+        </Link>
         <ul className="dropdown-menu">
-          <li><a className="dropdown-item" href="#">Accesorios de Pilates</a></li>
-          <li><a className="dropdown-item" href="#">Accesorios de Yoga</a></li>
-          <li><a className="dropdown-item" href="#">Cuidado Personal</a></li>
-          <li><a className="dropdown-item" href="#">Mats </a></li>
-          <li><a className="dropdown-item" href="#">Ropa de Yoga </a></li>
-          <li><a className="dropdown-item" href="#">Ofertas Especiales</a></li>
+          <li> <Link className="dropdown-item" to={`/category/accesorios-de-pilates`} >Accesorios de Pilates</Link></li>
+          <li><Link className="dropdown-item" to={`category/accesorios-de-yoga`} >Accesorios de Yoga</Link> </li>
+          <li><Link className="dropdown-item" to={`category/cuidado-personal`} >Cuidado Personal</Link> </li>
+          <li><Link className="dropdown-item" to={`category/mats`} >Mats</Link> </li>
+          <li><Link className="dropdown-item" to={`category/ropa-de-yoga`} >Ropa de Yoga</Link> </li>
+        
         </ul>
 
       </li>

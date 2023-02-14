@@ -2,7 +2,7 @@ import { Item } from "../Item/Item";
 
 export const ItemList = ({prods}) => {
     
-    console.log(prods)
+    
     return (
 
         <>
