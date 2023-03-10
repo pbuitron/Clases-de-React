@@ -1,10 +1,11 @@
-export const CartWidget = ({cantidad})=>{
-    return(
-      
-<a className="nav-link" href="#">
+import { Link } from "react-router-dom"
+export const CartWidget = ({ cantidad }) => {
+    return (
+
+        <>
             <span className="badge badge-pill bg-danger">{cantidad}</span>
-            <span><i className="fas fa-shopping-cart" /></span>
-          </a>     
+            <Link className="nav-link" to={`/cart`}> <span><i className="fas fa-shopping-cart" /></span> </Link>
+        </>
     )
 }
 
