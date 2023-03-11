@@ -1,9 +1,10 @@
 import { ItemCount } from "../ItemCount/ItemCount";
 import React from "react";
+import { useCarritoContext } from "../context/CarritoContext";
 export const ItemDetail = ({ prod }) => {
+const { addItem } = useCarritoContext()  
 const onAdd = (cantidad)=>{
-    console.log(cantidad)
-    console.log(prod)
+    addItem(prod, cantidad)
 }
 
     return (
@@ -18,9 +19,9 @@ const onAdd = (cantidad)=>{
             <div className="col-md-8">
                 <div className="card-body">
                     <h5 className="card-title">{prod.descripcion} </h5>
-                    <p className="card-text">
+                     <p className="card-text">
                         {prod.detalles}
-                    </p>
+                    </p> 
                     <div className="card-text">
                         <p className="text- ">Precio: S/. {prod.precio} </p>
                         <p className="card-text ">Cantidad en Stock: {prod.stock} </p>

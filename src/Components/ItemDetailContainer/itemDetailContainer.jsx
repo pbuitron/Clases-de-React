@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getProducto } from "../../utils/firebase";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 export const ItemDetailContainer = () => {
-    const {id}= useParams()
+    const { id } = useParams()
     const [producto, setProducto] = useState([])
 
     useEffect(() => {
@@ -14,8 +14,8 @@ export const ItemDetailContainer = () => {
     }, [])
 
     return (
-        <div className= "container card mb-3 conteiner" >
-            <ItemDetail prod={producto}/>
+        <div className="container card mb-3 conteiner" >
+            <ItemDetail prod={producto} />
         </div>
     );
 }

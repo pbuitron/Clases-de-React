@@ -1,39 +1,11 @@
 import { Link } from "react-router-dom"
 import "./Cart.css"
 import { ItemList } from "../ItemList/ItemList"
+import { useCarritoContext } from "../context/CarritoContext"
 export const Cart = () => {
-    const carrito = [
-        {
-            id: 9,
-            cant: 25,
-            idCategoria: "cuidado-personal",
-            descripcion: "JABON DE SANDALO SRI SRI",
-            detalles: "La pureza del sandalo es el corazon de este Jabón. Elaborado con ingredientes cuidadosamente seleccionados, para darte la generosidad de la naturaleza. Este Jabon nutre tu piel y su aroma relajante hara tu baño aún mas placentero",
-            stock: 85,
-            precio: 12,
-            img: "https://firebasestorage.googleapis.com/v0/b/tienda-virgo-coder44995.appspot.com/o/JABON-DE-SANDALO-SRI-SRI.jpg?alt=media&token=aea9dc42-764f-4cc6-afd2-02edf5fe486c"
-        },
-        {
-            id: 10,
-            cant: 35,
-            idCategoria: "cuidado-personal",
-            descripcion: "JABON DE SANDALO SRI SRI",
-            detalles: "La pureza del sandalo es el corazon de este Jabón. Elaborado con ingredientes cuidadosamente seleccionados, para darte la generosidad de la naturaleza. Este Jabon nutre tu piel y su aroma relajante hara tu baño aún mas placentero",
-            stock: 85,
-            precio: 12,
-            img: "https://firebasestorage.googleapis.com/v0/b/tienda-virgo-coder44995.appspot.com/o/JABON-DE-SANDALO-SRI-SRI.jpg?alt=media&token=aea9dc42-764f-4cc6-afd2-02edf5fe486c"
-        },
-        {
-            id: 11,
-            cant: 40,
-            idCategoria: "cuidado-personal",
-            descripcion: "JABON DE SANDALO SRI SRI",
-            detalles: "La pureza del sandalo es el corazon de este Jabón. Elaborado con ingredientes cuidadosamente seleccionados, para darte la generosidad de la naturaleza. Este Jabon nutre tu piel y su aroma relajante hara tu baño aún mas placentero",
-            stock: 85,
-            precio: 12,
-            img: "https://firebasestorage.googleapis.com/v0/b/tienda-virgo-coder44995.appspot.com/o/JABON-DE-SANDALO-SRI-SRI.jpg?alt=media&token=aea9dc42-764f-4cc6-afd2-02edf5fe486c"
-        }
-    ]
+    const { carrito, emptyCart, totalPrice, igv, subtotal } = useCarritoContext()
+
+
 
     return (
         <>
@@ -47,12 +19,12 @@ export const Cart = () => {
                     :
                     <section className="container mt-5">
                         <h2 className="textocart">Detalle de Compras</h2>
-                        <button className="btn btn-danger">Vaciar Carrito</button>
+                        <button className="btn btn-danger" onClick={() => { emptyCart() }}> Vaciar Carrito</button>
                         <ItemList prods={carrito} plantilla="ItemCart" />
                         <h2 className="textocart mt-4">Total Carrito</h2>
-                        <div className="container w-50">
-                            <table className="table ">
-                                <thead className="container mt-5 p-3">
+                        <div className="container">
+                            <table className="table container ">
+                                <thead className=" mt-5 p-3">
                                     <tr>
                                         <th scope="col">SUBTOTAL</th>
                                         <th scope="col">IGV</th>
@@ -61,23 +33,17 @@ export const Cart = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>S/. 1000</td>
-                                        <td>S/. 180</td>
-                                        <td>S/. 1180</td>
+                                        <td>S/. <span className="blockquote"> {subtotal()} </span></td>
+                                        <td>S/. <span className="blockquote">{igv()}</span> </td>
+                                        <td>S/. <span className="blockquote total">{totalPrice()}</span></td>
                                     </tr>
 
                                 </tbody>
                             </table>
                             <Link className="nav-link" to={`/`} > <button className="btn btn-primary mt-3 mb-0  w-auto">Continuar Comprando</button> </Link>
                             <Link className="nav-link" to={`/checkout`}><button className="btn btn-info mt-1 mb-5 w-auto">Finalizar Compra</button> </Link>
-                            
+
                         </div>
-
-
-
-                        
-
-
                     </section>
             }
         </>

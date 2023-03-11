@@ -1,0 +1,13 @@
+.conten{
+max-width: 120rem;
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column
+}
+
+.h2{
+ margin:0 2rem; 
+    
+}

@@ -1,0 +1,8 @@
+.ocultar {
+    width: 17rem;
+    height: 3rem;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-weight: 500;
+    overflow: hidden;
+}

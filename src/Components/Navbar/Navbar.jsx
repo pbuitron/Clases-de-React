@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 import { CartWidget } from "./CartWidgets/CartWidget";
 import { Logo } from "./Logo/Logo";
@@ -20,8 +20,8 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <BotonPrincipal nombreBoton={`principal`} />
-            <Secciones nombreSeccion={`Quienes Somos`} />
+            <Secciones nombreSeccion={`Home`} />
+            <BotonPrincipal nombreBoton={`Tienda`} />
             <Categorias/>
 
           </ul>
