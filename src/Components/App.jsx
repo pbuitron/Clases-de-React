@@ -13,6 +13,7 @@ import { CarritoProvider } from './context/CarritoContext';
 
 import { Checkout } from './Checkout/Checkout';
 import { Cart } from './Cart/Cart';
+import { Footer } from './Footer/Footer';
 export function App() {
 
   return (
@@ -27,6 +28,7 @@ export function App() {
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
+        <Footer />
         <ToastContainer />
       </CarritoProvider>
     </BrowserRouter>

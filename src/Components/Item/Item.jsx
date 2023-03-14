@@ -6,7 +6,7 @@ export const Item = ({ item }) => {
             <div className="card ">
                 <img src={item.img} className="card-img-top " alt={`imagen de ${item.descripcion}`} />
                 <div className="card-body">
-                <p className="card-text">
+                <p className="card-text titulos">
                         {item.descripcion}
                     </p>
                     <p className="card-text ocultar">

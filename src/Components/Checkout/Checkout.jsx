@@ -28,7 +28,7 @@ export const Checkout = () => {
       })
     })
     createOrdenCompra(cliente, aux, totalPrice(), new Date().toISOString()).then(ordenCompra => {
-      toast(`Muchas gracias por  su compra!. Su orden de compra con el id ${ordenCompra.id} por un total de $ ${new Intl.NumberFormat('de-DE').format(totalPrice())} se realizó con exito`, {
+      toast.success(`Gracias por  su compra!. Su orden de compra con el id ${ordenCompra.id} por un total de S/. ${new Intl.NumberFormat('de-DE').format(totalPrice())} se realizó con exito`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -36,7 +36,7 @@ export const Checkout = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
       });
       event.target.reset()
       emptyCart()
@@ -75,6 +75,7 @@ export const Checkout = () => {
                 Presione el siguiente botón para redirigirse a la tienda
               </span>
               <BotonPrincipal nombreBoton={`Continuar`} />
+              
             </div>
           </form>
         </>
@@ -198,7 +199,7 @@ export const Checkout = () => {
             </div>
 
             <div>
-                <p className="dato"> *Confirme su correo, de lo contrario no se habilitará el boton de FINALIZAR COMPRA</p>
+                <span className="subtitle"> *Confirme su correo, de lo contrario no se habilitará el boton de FINALIZAR COMPRA</span>
             </div>
 
             <button title="Finalizar Compra" type="submit" className="btn btn-info finalizarCompra" disabled={!isFormValid()}>

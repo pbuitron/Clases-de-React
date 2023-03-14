@@ -10,6 +10,7 @@ align-items: center;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 16rem;
     gap: 15px;
     padding: 50px 40px 20px 40px;
     background-color: #ffffff;
@@ -45,7 +46,7 @@ align-items: center;}
     color: #212121;
   }
   
-  .subtitle {
+  .subtitle{
     font-size: 0.725rem;
     max-width: 80%;
     text-align: center;
@@ -105,7 +106,5 @@ align-items: center;}
     cursor: pointer;
   }
   
-  .dato{
-  font-size: .9rem;}
   
   
