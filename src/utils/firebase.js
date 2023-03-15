@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, doc, addDoc, getDocs, getDoc, updateDoc, deleteDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBu-DmQ-nCiKt0J1jFQMHZZGOuFtNEye64",
+    apiKey: process.env.API_KEY,
     authDomain: "tienda-virgo-coder44995.firebaseapp.com",
     projectId: "tienda-virgo-coder44995",
     storageBucket: "tienda-virgo-coder44995.appspot.com",
