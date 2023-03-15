@@ -11,22 +11,22 @@ export const Footer = React.memo(() => {
                 </div>
 
                 <div>
-                    <a href='https://www.facebook.com/' className='me-4 text-reset' target="_blank">
+                    <a href='https://www.facebook.com/' className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="facebook-f" />
                     </a>
-                    <a href='https://twitter.com/' className='me-4 text-reset' target="_blank">
+                    <a href='https://twitter.com/' className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="twitter" />
                     </a>
-                    <a href='https://behance.net/' className='me-4 text-reset' target="_blank">
+                    <a href='https://behance.net/' className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="behance" />
                     </a>
-                    <a href='https://www.instagram.com/' className='me-4 text-reset' target="_blank">
+                    <a href='https://www.instagram.com/' className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="instagram" />
                     </a>
-                    <a href='https://www.linkedin.com/in/paul-dennis-buitron-velarde-a65328147/'  className='me-4 text-reset' target="_blank">
+                    <a href='https://www.linkedin.com/in/paul-dennis-buitron-velarde-a65328147/'  className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="linkedin" />
                     </a>
-                    <a href='https://github.com/pbuitron' className='me-4 text-reset' target="_blank">
+                    <a href='https://github.com/pbuitron' className='me-4 text-reset' target="_blank" rel="noreferrer">
                         <MDBIcon fab icon="github" />
                     </a>
                 </div>
@@ -76,9 +76,9 @@ export const Footer = React.memo(() => {
             </section>
 
             <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-                © 2023 Copyright:
+                © 2023 Copyright-
                 <a className='text-reset fw-bold' href='https://github.com/pbuitron' target="_blank">
-                    Paul Buitrón
+                     Paul Buitrón
                 </a>
             </div>
         </MDBFooter>

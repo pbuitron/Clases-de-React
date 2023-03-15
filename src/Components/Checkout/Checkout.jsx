@@ -10,10 +10,10 @@ import { createOrdenCompra, updateProducto, getProducto, } from "../../utils/fir
 export const Checkout = () => {
   const [email, setEmail] = useState("");
   const [emailConfirmation, setEmailConfirmation] = useState("");
-  
+
   const consultarForm = (event) => {
     event.preventDefault();
-    
+
     const data = new FormData(datosForm.current)
     const cliente = Object.fromEntries(data)
     const aux = [...carrito]
@@ -75,7 +75,7 @@ export const Checkout = () => {
                 Presione el siguiente botón para redirigirse a la tienda
               </span>
               <BotonPrincipal nombreBoton={`Continuar`} />
-              
+
             </div>
           </form>
         </>
@@ -121,39 +121,7 @@ export const Checkout = () => {
               />
             </div>
 
-            <div className="input_container">
-              <label className="form_label" htmlFor="email">
-                E-mail
-              </label>
-              <input
-                placeholder="Ingrese su email"
-                title="email"
-                name="email"
-                type="email"
-                className="input_field"
-                id="email"
-                value={email}
-                onChange={handleEmailChange}
-                required
-              />
-            </div>
 
-            <div className="input_container">
-              <label className="form_label" htmlFor="email-Confirmation">
-                Confirmar E-mail
-              </label>
-              <input
-                placeholder="Ingrese su email"
-                title="confirmacion"
-                name="email-Confirmation"
-                type="email"
-                className="input_field"
-                id="email-Confirmation"
-                value={emailConfirmation}
-                 onChange={handleEmailConfirmationChange}
-                required
-              />
-            </div>
 
             <div className="input_container">
               <label className="form_label" htmlFor="dni_field">
@@ -198,8 +166,42 @@ export const Checkout = () => {
               />
             </div>
 
+            <div className="input_container">
+              <label className="form_label" htmlFor="email">
+                E-mail
+              </label>
+              <input
+                placeholder="Ingrese su email"
+                title="email"
+                name="email"
+                type="email"
+                className="input_field"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                required
+              />
+            </div>
+
+            <div className="input_container">
+              <label className="form_label" htmlFor="email-Confirmation">
+                Confirmar E-mail
+              </label>
+              <input
+                placeholder="Ingrese su email"
+                title="confirmacion"
+                name="email-Confirmation"
+                type="email"
+                className="input_field"
+                id="email-Confirmation"
+                value={emailConfirmation}
+                onChange={handleEmailConfirmationChange}
+                required
+              />
+            </div>
+
             <div>
-                <span className="subtitle"> *Confirme su correo, de lo contrario no se habilitará el boton de FINALIZAR COMPRA</span>
+              <span className="subtitle"> *Confirme su correo, de lo contrario no se habilitará el boton de FINALIZAR COMPRA</span>
             </div>
 
             <button title="Finalizar Compra" type="submit" className="btn btn-info finalizarCompra" disabled={!isFormValid()}>
