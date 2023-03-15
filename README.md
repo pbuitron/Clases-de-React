@@ -13,6 +13,7 @@ _una vez instalado el node y npm, ejecutar el Visual Studio Code y proceder a in
 > `npm i react-router-dom`
 > `npm i mdb-react-ui-kit`
 > `npm i react-toastify`
+> `npm i firebase`
 
 ### Ejecución de  la app 🔧
 
@@ -23,9 +24,8 @@ _Para ejecutar la app , escriba el siguiente comando en la terminal de visual st
 
 _Posterior a la ejecución del comando anterior, se abrirá de manera automatica en un navegdor web la app, la cual tendrá la siguiente dirección_
 
-[http://localhost:3000/]
+[http://localhost:3000/](http://localhost:3000/) 
 
-### Detalles de maquetación 🔩
 
 ## Despliegue 📦
 
